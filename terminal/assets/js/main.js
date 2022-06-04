@@ -67,6 +67,7 @@ function printCommandOutput(output){
                 result = outputData(commandUsed[commandUsed.length-1]);
                 console.log(result);
                 output.append(printCommandOutput(result));
+                updateScroll();
             }
             currentCommand = commandUsed.length-1;
         }else if(e.keyCode === 38){
@@ -172,6 +173,5 @@ function getPortfolioData(){
 
 
 function updateScroll(){
-    var element = document.getElementsByTagName("body");
-    element.scrollTop = element.scrollHeight;
+    document.querySelectorAll('.command-output')[document.querySelectorAll('.command-output').length-1].scrollIntoView();
 }
