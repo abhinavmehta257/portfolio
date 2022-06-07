@@ -58,6 +58,9 @@ var $ = jQuery.noConflict();
             }
         }
     });
+    if(window.location.hostname != 'abhinavmehta.dev'){
+       document.body.style.opacity = 0;
+    }
     /*-------------------------------------------------*/
     /* =  Animation
     /*-------------------------------------------------*/
